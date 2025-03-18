@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 
-function DescriptionList({ edad, ocupacion, descripcion, creador, año_lanzamiento, tempradas }) {
+function Lista({ edad, ocupacion, descripcion, creador, año_lanzamiento, tempradas }) {
   return (
     <ul>
       {edad && <li><strong>Edad:</strong> {edad}</li>}
@@ -29,7 +29,7 @@ function Profile({ urlBj, nomBj, numBj , edad, ocupacion, descripcion, creador, 
         <div className="back">
           <p>{numBj}</p>
           <h2>{nomBj}</h2>
-          <DescriptionList
+          <Lista
             edad={edad}
             ocupacion={ocupacion}
             descripcion={descripcion}
