@@ -1,0 +1,119 @@
+:root {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
+  line-height: 1;
+  color-scheme: light dark;
+  color: #EAA156;
+  background-color: #732449;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p{
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.grande {
+  font-size: 50px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.contenedor {
+  width: 300px;
+  height: 450px;
+  perspective: 1000px; /* Profundidad para el efecto 3D */
+}
+
+.card-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.front {
+  background-color: black;
+}
+
+.back {
+  background-color: #AE8B87;
+  transform: rotateY(180deg);
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card-container.flipped .card {
+  transform: rotateY(180deg);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 10px;
+}
+
+
+.back ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.back li {
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 1.5;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #732449;
+}
+
+.back strong {
+  color: #3a2209;
+}
